@@ -67,6 +67,38 @@ This works because the header and static library are installed to:
 
 ---
 
+### 3. Example Usage
+
+```c
+#include <stdio.h>
+#include "easy_conf.h"
+
+int main() {
+    node_list config = read_config("settings.conf");
+    config.print_list(&config);
+
+    const char* db_host = config.get_setting(&config, "host");
+    if (db_host) {
+        printf("DB host: %s\n", db_host);
+    }
+
+    config.free_list(&config);
+    return 0;
+}
+```
+
+---
+
+## 📝 Example `settings.conf`
+
+```
+host=localhost
+port=5432
+debug=true
+```
+
+---
+
 ## 🛠 Functions Overview
 
 After calling `read_config("filename.cfg")`, you get a `node_list` structure with these functions:
