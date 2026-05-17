@@ -2,7 +2,7 @@
 
 A simple, lightweight C library for parsing configuration files into a linked list structure.
 
-## ✨ Features
+## Features
 
 - Easy integration
 - Minimal dependencies (pure C)
@@ -11,7 +11,7 @@ A simple, lightweight C library for parsing configuration files into a linked li
 
 ---
 
-## 🔧 How to Use
+## How to Use
 
 You can use `easy_conf` in **two ways**:
 
@@ -89,7 +89,7 @@ int main() {
 
 ---
 
-## 📝 Example `settings.conf`
+## Example `settings.conf`
 
 ```
 host=localhost
@@ -99,7 +99,7 @@ debug=true
 
 ---
 
-## 🛠 Functions Overview
+## Functions Overview
 
 After calling `read_config("filename.cfg")`, you get a `node_list` structure with these functions:
 
@@ -112,6 +112,6 @@ After calling `read_config("filename.cfg")`, you get a `node_list` structure wit
 
 ---
 
-## 📄 License
+## License
 
 MIT License
